@@ -4,17 +4,16 @@ const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
-╔═══════════════════╗
-   *🤖 ${settings.botName || 'KnightBot-MD'}*  
-   Version: *${settings.version || '3.0.0'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
-   YT : ${global.ytch}
-╚═══════════════════╝
+╭───────────────◆
+│    *🤖 ${settings.botName || 'RELAX-MD'}*  
+│    Version: *${settings.version || '3.0.0'}*
+│    by ${settings.botOwner || '⤹𝐗 𝐑𝐎𝐌𝐄𝐎𓂃༊'}
+│    YT : ${global.ytch}
+╰───────────────◆
 
-*Available Commands:*
+-----💗 𝐑ᴇʟᴀx-𝐌ᴅ 𝐂ᴏᴍᴍᴀɴᴅꜱ 💗-----
 
-╔═══════════════════╗
-🌐 *General Commands*:
+╔════〔 ⚙️ 𝐆ᴇɴᴇʀᴀʟ 〕════╗
 ║ ➤ .help or .menu
 ║ ➤ .ping
 ║ ➤ .alive
@@ -37,8 +36,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .url
 ╚═══════════════════╝ 
 
-╔═══════════════════╗
-👮‍♂️ *Admin Commands*:
+╔════〔 😻 𝐀ᴅᴍɪɴ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
 ║ ➤ .ban @user
 ║ ➤ .promote @user
 ║ ➤ .demote @user
@@ -63,10 +61,9 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .setgdesc <description>
 ║ ➤ .setgname <new name>
 ║ ➤ .setgpp (reply to image)
-╚═══════════════════╝
+╚════════════════════════╝
 
-╔═══════════════════╗
-🔒 *Owner Commands*:
+╔════〔🧿𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ 〕════╗
 ║ ➤ .mode <public/private>
 ║ ➤ .clearsession
 ║ ➤ .antidelete
@@ -86,8 +83,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .mention <on/off>
 ╚═══════════════════╝
 
-╔═══════════════════╗
-🎨 *Image/Sticker Commands*:
+╔════〔 🎨 𝐈ᴍᴀɢᴇ/𝐒ᴛɪᴄᴋᴇʀ 〕════╗
 ║ ➤ .blur <image>
 ║ ➤ .simage <reply to sticker>
 ║ ➤ .sticker <reply to image>
@@ -100,20 +96,18 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .emojimix <emj1>+<emj2>
 ║ ➤ .igs <insta link>
 ║ ➤ .igsc <insta link>
-╚═══════════════════╝  
+╚═══════════════════════╝  
 
-╔═══════════════════╗
-🖼️ *Pies Commands*:
+╔════〔 🔥 𝐏ɪᴇꜱ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
 ║ ➤ .pies <country>
 ║ ➤ .china 
 ║ ➤ .indonesia 
 ║ ➤ .japan 
 ║ ➤ .korea 
 ║ ➤ .hijab
-╚═══════════════════╝
+╚════════════════════════╝
 
-╔═══════════════════╗
-🎮 *Game Commands*:
+╔════〔 🎮 𝐆ᴀᴍᴇ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
 ║ ➤ .tictactoe @user
 ║ ➤ .hangman
 ║ ➤ .guess <letter>
@@ -121,19 +115,17 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .answer <answer>
 ║ ➤ .truth
 ║ ➤ .dare
-╚═══════════════════╝
+╚════════════════════════╝
 
-╔═══════════════════╗
-🤖 *AI Commands*:
+╔═════〔 🧠 𝐀ɪ - 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
 ║ ➤ .gpt <question>
 ║ ➤ .gemini <question>
 ║ ➤ .imagine <prompt>
 ║ ➤ .flux <prompt>
 ║ ➤ .sora <prompt>
-╚═══════════════════╝
+╚═════════════════════════╝
 
-╔═══════════════════╗
-🎯 *Fun Commands*:
+╔═════〔 🙃 𝐅ᴜɴ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
 ║ ➤ .compliment @user
 ║ ➤ .insult @user
 ║ ➤ .flirt 
@@ -145,10 +137,9 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .ship @user
 ║ ➤ .simp @user
 ║ ➤ .stupid @user [text]
-╚═══════════════════╝
+╚════════════════════════╝
 
-╔═══════════════════╗
-🔤 *Textmaker*:
+╔═════〔 💬 𝐓ᴇxᴛ 𝐌ᴀᴋᴇʀ 〕════╗
 ║ ➤ .metallic <text>
 ║ ➤ .ice <text>
 ║ ➤ .snow <text>
@@ -167,10 +158,9 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .blackpink <text>
 ║ ➤ .glitch <text>
 ║ ➤ .fire <text>
-╚═══════════════════╝
+╚═════════════════════╝
 
-╔═══════════════════╗
-📥 *Downloader*:
+╔════〔 📥 𝐃ᴏᴡɴʟᴏᴀᴅ 〕════╗
 ║ ➤ .play <song_name>
 ║ ➤ .song <song_name>
 ║ ➤ .spotify <query>
@@ -181,8 +171,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .ytmp4 <Link>
 ╚═══════════════════╝
 
-╔═══════════════════╗
-🧩 *MISC*:
+╔════〔 💥 𝐌ɪꜱᴄ 〕════╗
 ║ ➤ .heart
 ║ ➤ .horny
 ║ ➤ .circle
@@ -199,10 +188,9 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .jail 
 ║ ➤ .passed 
 ║ ➤ .triggered
-╚═══════════════════╝
+╚═════════════════╝
 
-╔═══════════════════╗
-🖼️ *ANIME*:
+╔═════〔 🫀 𝐀ɴɪᴍᴇ 〕════╗
 ║ ➤ .nom 
 ║ ➤ .poke 
 ║ ➤ .cry 
@@ -211,16 +199,19 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .hug 
 ║ ➤ .wink 
 ║ ➤ .facepalm 
-╚═══════════════════╝
+╚══════════════════╝
 
-╔═══════════════════╗
-💻 *Github Commands:*
+╔════〔 🥷 𝐆ɪᴛʜᴜʙ 〕════╗
 ║ ➤ .git
 ║ ➤ .github
 ║ ➤ .sc
 ║ ➤ .script
 ║ ➤ .repo
-╚═══════════════════╝
+╚══════════════════╝
+╭───────────────◆
+│ 𝐓ʜᴀɴᴋꜱ 𝐅ᴏʀ 𝐔ꜱɪɴɢ 𝐎ᴜʀ 𝐁ᴏᴛ 🕊️
+│ ©ᴩᴏᴡᴇʀᴇᴅ ʙʏ - ⤹𝐗 𝐑𝐎𝐌𝐄𝐎𓂃༊
+╰───────────────◆
 
 Join our channel for updates:`;
 
@@ -237,8 +228,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '120363426138185585@newsletter',
+                        newsletterName: 'RELAX-MD',
                         serverMessageId: -1
                     }
                 }
@@ -251,8 +242,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
+                        newsletterJid: '120363426138185585@newsletter',
+                        newsletterName: 'RELAX-MD',
                         serverMessageId: -1
                     } 
                 }
