@@ -75,7 +75,7 @@ let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "RELAX-MD"
 global.themeemoji = "•"
-const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
+const pairingCode = true
 const useMobile = process.argv.includes("--mobile")
 
 // Only create readline interface if we're in an interactive environment
