@@ -36,7 +36,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .url
 ╚═══════════════════╝ 
 
-╔════〔 😻 𝐀ᴅᴍɪɴ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
+╔════〔 😻 𝐀ᴅᴍɪɴ 〕════╗
 ║ ➤ .ban @user
 ║ ➤ .promote @user
 ║ ➤ .demote @user
@@ -61,7 +61,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .setgdesc <description>
 ║ ➤ .setgname <new name>
 ║ ➤ .setgpp (reply to image)
-╚════════════════════════╝
+╚════════════════════╝
 
 ╔════〔🧿𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ 〕════╗
 ║ ➤ .mode <public/private>
@@ -83,7 +83,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .mention <on/off>
 ╚═══════════════════╝
 
-╔════〔 🎨 𝐈ᴍᴀɢᴇ/𝐒ᴛɪᴄᴋᴇʀ 〕════╗
+╔════〔 🎨 𝐈ᴍɢ/𝐒ᴛᴄ 〕════╗
 ║ ➤ .blur <image>
 ║ ➤ .simage <reply to sticker>
 ║ ➤ .sticker <reply to image>
@@ -96,18 +96,18 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .emojimix <emj1>+<emj2>
 ║ ➤ .igs <insta link>
 ║ ➤ .igsc <insta link>
-╚═══════════════════════╝  
+╚═══════════════════╝  
 
-╔════〔 🔥 𝐏ɪᴇꜱ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
+╔════〔 🔥 𝐏ɪᴇꜱ 〕════╗
 ║ ➤ .pies <country>
 ║ ➤ .china 
 ║ ➤ .indonesia 
 ║ ➤ .japan 
 ║ ➤ .korea 
 ║ ➤ .hijab
-╚════════════════════════╝
+╚═════════════════╝
 
-╔════〔 🎮 𝐆ᴀᴍᴇ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
+╔════〔 🎮 𝐆ᴀᴍᴇ 〕════╗
 ║ ➤ .tictactoe @user
 ║ ➤ .hangman
 ║ ➤ .guess <letter>
@@ -115,17 +115,17 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .answer <answer>
 ║ ➤ .truth
 ║ ➤ .dare
-╚════════════════════════╝
+╚═════════════════╝
 
-╔═════〔 🧠 𝐀ɪ - 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
+╔═════〔 🧠 𝐀ɪ 〕════╗
 ║ ➤ .gpt <question>
 ║ ➤ .gemini <question>
 ║ ➤ .imagine <prompt>
 ║ ➤ .flux <prompt>
 ║ ➤ .sora <prompt>
-╚═════════════════════════╝
+╚════════════════╝
 
-╔═════〔 🙃 𝐅ᴜɴ 𝐂ᴏᴍᴍᴀɴᴅꜱ 〕════╗
+╔═════〔 🙃 𝐅ᴜɴ 〕════╗
 ║ ➤ .compliment @user
 ║ ➤ .insult @user
 ║ ➤ .flirt 
@@ -137,7 +137,7 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .ship @user
 ║ ➤ .simp @user
 ║ ➤ .stupid @user [text]
-╚════════════════════════╝
+╚══════════════════╝
 
 ╔═════〔 💬 𝐓ᴇxᴛ 𝐌ᴀᴋᴇʀ 〕════╗
 ║ ➤ .metallic <text>
