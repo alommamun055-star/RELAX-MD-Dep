@@ -223,7 +223,7 @@ process.exit(1)
 }
 await new Promise(resolve => setTimeout(resolve, 5000))
     console.log("PHONE NUMBER:", phoneNumber)
-let code = await XeonBotInc.requestPairingCode(phoneNumber)
+let code = await XeonBotInc.requestPairingCode(phoneNumber.trim())
 code = code?.match(/.{1,4}/g)?.join("-") || code
 
 console.log("================================")
