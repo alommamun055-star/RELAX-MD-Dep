@@ -100,7 +100,7 @@ return Promise.resolve(settings.ownerNumber || phoneNumber)
 async function startXeonBotInc() {
 try {
 let { version, isLatest } = await fetchLatestBaileysVersion()
-const { state, saveCreds } = await useMultiFileAuthState(./session)
+        const { state, saveCreds } = await useMultiFileAuthState('./session')
 const msgRetryCounterCache = new NodeCache()
 
 const XeonBotInc = makeWASocket({  
