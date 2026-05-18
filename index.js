@@ -214,7 +214,9 @@ async function startXeonBotInc() {
     // Handle pairing code
     if (pairingCode && !XeonBotInc.authState.creds.registered) {
         if (useMobile) throw new Error('Cannot use pairing code with mobile api')
-
+let code = await XeonBotInc.requestPairingCode(phoneNumber)
+code = code?.match(/.{1,4}/g)?.join("-") || code
+console.log("Your Pairing Code : ${code}")
         let phoneNumber
         if (!!global.phoneNumber) {
             phoneNumber = global.phoneNumber
