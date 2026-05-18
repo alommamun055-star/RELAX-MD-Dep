@@ -395,8 +395,21 @@ process.on('unhandledRejection', (err) => {
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
-    fs.unwatchFile(file)
-    console.log(chalk.redBright(`Update ${__filename}`))
-    delete require.cache[file]
-    require(file)
+fs.unwatchFile(file)
+console.log(chalk.redBright("Update ${__filename}"))
+delete require.cache[file]
+require(file)
+})
+
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) => {
+res.send('Bot Running')
+})
+
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => {
+console.log("Server running on port ${PORT}")
 })
