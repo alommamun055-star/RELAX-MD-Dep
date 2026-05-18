@@ -218,21 +218,16 @@ if (useMobile) throw new Error('Cannot use pairing code with mobile api')
 const pn = require('awesome-phonenumber')
 
 if (!pn('+' + phoneNumber).isValid()) {
-    console.log(chalk.red('Invalid phone number'))
-    process.exit(1)
+console.log(chalk.red('Invalid phone number'))
+process.exit(1)
 }
 
-setTimeout(async () => {
-    try {
-        let code = await XeonBotInc.requestPairingCode(phoneNumber)
-        code = code?.match(/.{1,4}/g)?.join("-") || code
+let code = await XeonBotInc.requestPairingCode(phoneNumber)
+code = code?.match(/.{1,4}/g)?.join("-") || code
 
-        console.log(`Your Pairing Code : ${code}`)
-    } catch (error) {
-        console.error(error)
-    }
-}, 3000)
-
+console.log("================================")
+console.log("PAIR CODE:", code)
+console.log("================================")
 }
 
     // Connection handling
