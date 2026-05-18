@@ -19,7 +19,7 @@ const axios = require('axios')
 const { handleMessages, handleGroupParticipantUpdate, handleStatus } = require('./main');
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
-const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, sleep, reSize } = require('./lib/myfunc')
+const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./lib/myfunc')
 const {
     default: makeWASocket,
     useMultiFileAuthState,
@@ -70,7 +70,7 @@ setInterval(() => {
     }
 }, 30_000) // check every 30 seconds
 
-let phoneNumber = ""
+let phoneNumber = "918116539293"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "RELAX-MD"
@@ -105,13 +105,12 @@ async function startXeonBotInc() {
                 creds: state.creds,
                 keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
             },
-markOnlineOnConnect: true,
-generateHighQualityLinkPreview: true,
-syncFullHistory: false,
-fireInitQueries: false,
-getMessage: async (key) => {
-let jid = jidNormalizedUser(key.remoteJid)
-let msg = await store.loadMessage(jid, key.id)
+            markOnlineOnConnect: true,
+            generateHighQualityLinkPreview: true,
+            syncFullHistory: false,
+            getMessage: async (key) => {
+                let jid = jidNormalizedUser(key.remoteJid)
+                let msg = await store.loadMessage(jid, key.id)
                 return msg?.message || ""
             },
             msgRetryCounterCache,
@@ -281,10 +280,10 @@ let msg = await store.loadMessage(jid, key.id)
             }
 
             await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'KNIGHT BOT'} ]`)}\n\n`))
+            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'RELAX-MD'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: xromeo`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: alommamun055-star`))
+            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: Mamun Series`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: ⤹𝐗 𝐑𝐎𝐌𝐄𝐎𓂃༊`))
             console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
