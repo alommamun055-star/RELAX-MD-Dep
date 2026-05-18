@@ -21,9 +21,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/keyed-db": "^0.2.4",
-    "@ffmpeg/ffmpeg": "^0.12.15",
-    "@hapi/boom": "^10.0.1",
+"@adiwajshing/keyed-db": "^0.2.4",
+"@ffmpeg/ffmpeg": "^0.12.15",
+"@hapi/boom": "^10.0.1",
+"express": "^4.19.2",
     "@types/node": "^18.0.6",
     "@whiskeysockets/baileys": "^v7.0.0-rc.9",
     "awesome-phonenumber": "^5.9.0",
