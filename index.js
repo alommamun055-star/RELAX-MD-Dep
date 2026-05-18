@@ -75,7 +75,7 @@ let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "RELAX-MD"
 global.themeemoji = "•"
-const pairingCode = true
+const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
 
 // Only create readline interface if we're in an interactive environment
@@ -283,7 +283,7 @@ async function startXeonBotInc() {
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'RELAX-MD'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
             console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: Mamun Series`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: alommamun055-star`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: ⤹𝐗 𝐑𝐎𝐌𝐄𝐎𓂃༊`))
             console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
@@ -395,21 +395,8 @@ process.on('unhandledRejection', (err) => {
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
-fs.unwatchFile(file)
-console.log(chalk.redBright("Update ${__filename}"))
-delete require.cache[file]
-require(file)
-})
-
-const express = require('express')
-const app = express()
-
-app.get('/', (req, res) => {
-res.send('Bot Running')
-})
-
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => {
-console.log('Server running')
+    fs.unwatchFile(file)
+    console.log(chalk.redBright(`Update ${__filename}`))
+    delete require.cache[file]
+    require(file)
 })
