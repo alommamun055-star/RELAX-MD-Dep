@@ -411,9 +411,11 @@ delete require.cache[file]
 require(file)
 
 })
+setTimeout(() => {
 require("http")
 .createServer((req, res) => {
 res.writeHead(200, { "Content-Type": "text/plain" })
 res.end("RELAX-MD RUNNING")
 })
 .listen(process.env.PORT || 3000)
+}, 15000)
