@@ -221,7 +221,7 @@ if (!pn('+' + phoneNumber).isValid()) {
 console.log(chalk.red('Invalid phone number'))
 process.exit(1)
 }
-
+await new Promise(resolve => setTimeout(resolve, 5000))
 let code = await XeonBotInc.requestPairingCode(phoneNumber)
 code = code?.match(/.{1,4}/g)?.join("-") || code
 
